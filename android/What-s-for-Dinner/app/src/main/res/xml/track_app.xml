@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ga_trackingId">UA-109671835-1</string>
+    <bool name="ga_autoActivityTracking">true</bool>
+    <bool name="ga_reportUncaughtExceptions">true</bool>
+    <screenName name="com.example.android.dinnerapp.MainActivity">
+        Main screen
+    </screenName>
+    <screenName name="com.example.android.dinnerapp.OrderDinnerActivity">
+        Order dinner
+    </screenName>
+    <screenName name="com.example.android.dinnerapp.RemoveMealActivity">
+        Eradicate dinner
+    </screenName>
+    <screenName name="com.example.android.dinnerapp.ShowDinnerActivity">
+        Show dinner
+    </screenName>
+    <screenName name="com.example.android.dinnerapp.ShowAllDinnersActivity">
+        Show all dinners
+    </screenName>
+    <screenName name="com.example.android.dinnerapp.ShowRecipeActivity">
+        Show recipe
+    </screenName>
+    <screenName name="com.example.android.dinnerapp.ShowDailySpecialActivity">
+        Show Daily Special
+    </screenName>
+
+</resources>
