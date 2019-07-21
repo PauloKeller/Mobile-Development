@@ -4,10 +4,6 @@ import 'package:login_bloc/src/blocs/bloc.dart';
 import 'package:login_bloc/src/blocs/provider.dart';
 
 class LoginScreen extends StatelessWidget {
-
-
-  void submit() {}
-
   Widget emailField(Bloc bloc) {
     return StreamBuilder(
       stream: bloc.email,
@@ -42,11 +38,20 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
-  Widget submitButton() {
-    return RaisedButton(
-      child: Text("Login"),
-      color: Colors.blue,
-      onPressed: submit,
+  Widget submitButton(Bloc bloc) {
+    return StreamBuilder(
+      stream: bloc.submitValid,
+      builder: (context, snapshot) {
+        return RaisedButton(
+          child: Text("Login"),
+          color: Colors.blue,
+          onPressed: snapshot.hasData
+              ? () {
+                  bloc.submit();
+                }
+              : null,
+        );
+      },
     );
   }
 
@@ -63,7 +68,7 @@ class LoginScreen extends StatelessWidget {
           SizedBox(
             height: 25.0,
           ),
-          submitButton(),
+          submitButton(bloc),
         ],
       ),
     );
