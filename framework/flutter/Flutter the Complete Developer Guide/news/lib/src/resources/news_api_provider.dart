@@ -4,7 +4,9 @@ import 'package:http/http.dart' show Client;
 
 import 'package:news/src/models/item.dart';
 
-class NewsApiProvider {
+import 'repository.dart';
+
+class NewsApiProvider implements Source {
   Client client = Client();
   final _root = "https://hacker-news.firebaseio.com/v0";
 
