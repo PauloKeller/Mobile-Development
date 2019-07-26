@@ -12,15 +12,18 @@ import 'repository.dart';
 class NewsDbProvider implements Source, Cache {
   Database db;
 
-  NewsDbProvider () {
+  NewsDbProvider() {
     init();
   }
 
   void init() async {
     Directory documentsDirectory = await getApplicationDocumentsDirectory();
     final path = join(documentsDirectory.path, "items.db");
-    db = await openDatabase(path, version: 1, onCreate: (Database newDb, int version) {
-      newDb.execute("""
+    db = await openDatabase(
+      path,
+      version: 1,
+      onCreate: (Database newDb, int version) {
+        newDb.execute("""
         CREATE TABLE Items
           (
             id INTEGER PRIMARY KEY,
@@ -38,7 +41,8 @@ class NewsDbProvider implements Source, Cache {
             descendants INTEGER
           )
         """);
-    });
+      },
+    );
   }
 
   Future<ItemModel> fetchItem(int id) async {
@@ -57,11 +61,15 @@ class NewsDbProvider implements Source, Cache {
   }
 
   Future<int> addItem(ItemModel item) {
-    return db.insert("Items", item.toMapForDb());
+    return db.insert("Items", item.toMapForDb(), conflictAlgorithm: ConflictAlgorithm.ignore);
   }
 
   Future<List<int>> fetchTopIds() {
     return null;
+  }
+
+  Future<int> clear() {
+    return db.delete("Items");
   }
 }
 
