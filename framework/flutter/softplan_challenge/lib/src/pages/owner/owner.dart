@@ -19,7 +19,7 @@ class _OwnerPageState extends State<OwnerPage> {
     final completer = Completer();
     final cameraPosition = CameraPosition(
       target: LatLng(widget.user.address.geo.lat, widget.user.address.geo.lng),
-      zoom: 14.4746,
+      zoom: 5.0,
     );
 
     return Expanded(
