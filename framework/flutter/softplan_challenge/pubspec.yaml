@@ -1,0 +1,30 @@
+name: softplan_challenge
+description: A Softplan challenge app build on flutter 
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0-dev.1"
+
+dependencies:
+  flutter_spinkit: 4.1.0
+  google_maps_flutter: 0.5.21+12
+  shared_preferences: 0.5.4+6
+  rxdart: 0.22.6
+  dio: 3.0.7
+
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/todo.png
