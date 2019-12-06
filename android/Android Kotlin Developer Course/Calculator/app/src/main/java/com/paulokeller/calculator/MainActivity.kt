@@ -107,6 +107,17 @@ class MainActivity : AppCompatActivity() {
             }
         }
         etShowNumber.setText(finalNumber.toString())
-        isNewOp=true
+        isNewOp = true
+    }
+
+    fun buPercent(view: View) {
+        val number = etShowNumber.text.toString().toDouble() / 100;
+        etShowNumber.setText(number.toString())
+        isNewOp = true
+    }
+
+    fun buClean(view: View) {
+        etShowNumber.setText("0")
+        isNewOp = true
     }
 }
