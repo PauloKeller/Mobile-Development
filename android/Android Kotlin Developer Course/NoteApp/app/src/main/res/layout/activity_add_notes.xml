@@ -42,7 +42,7 @@
         android:layout_marginBottom="96dp"
         android:background="@drawable/bublue_color"
         android:onClick="buAdd"
-        android:text="Add Note"
+        android:text="@string/add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
