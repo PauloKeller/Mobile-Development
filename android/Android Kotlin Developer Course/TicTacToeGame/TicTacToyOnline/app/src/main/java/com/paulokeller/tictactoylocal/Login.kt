@@ -32,7 +32,7 @@ class Login : AppCompatActivity() {
 
                     val currentUser = mAuth!!.currentUser
                     if (currentUser != null) {
-                        myRef.child("Users").child(splitString(currentUser.email.toString()))
+                        myRef.child("Users").child(splitString(currentUser.email.toString())).child("Request")
                             .setValue(currentUser.uid)
                         navigateToMain()
                     }
