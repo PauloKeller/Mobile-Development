@@ -39,8 +39,6 @@ class MainActivity : AppCompatActivity() {
         val myView = layoutInflater.inflate(R.layout.tweets_ticket, null)
         return myView
       }
-
-
     }
 
     override fun getItem(p0: Int): Any {
