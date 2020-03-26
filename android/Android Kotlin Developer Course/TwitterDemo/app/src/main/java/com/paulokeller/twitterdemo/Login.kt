@@ -106,10 +106,11 @@ class Login : AppCompatActivity() {
   }
 
   fun loadTweets() {
+    val currentUser = mAuth!!.currentUser
     if (currentUser != null) {
       val intent = Intent(this, MainActivity::class.java)
-      intent.putExtra("email", currentUser!!.email)
-      intent.putExtra("uid", currentUser!!.email)
+      intent.putExtra("email", currentUser.email)
+      intent.putExtra("uid", currentUser.uid)
       startActivity(intent)
     }
   }
