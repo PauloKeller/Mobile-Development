@@ -16,6 +16,7 @@ import androidx.core.app.ActivityCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.messaging.FirebaseMessaging
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.UploadTask
@@ -43,7 +44,7 @@ class Login : AppCompatActivity() {
       checkPermission()
     })
 
-
+    FirebaseMessaging.getInstance().subscribeToTopic("news")
   }
 
   fun buLoginEvent(view: View) {

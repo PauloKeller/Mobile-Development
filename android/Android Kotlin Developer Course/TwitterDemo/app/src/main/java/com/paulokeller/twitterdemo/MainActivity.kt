@@ -12,6 +12,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.Toast
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -27,7 +29,6 @@ import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
-import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
   private val tweets = ArrayList<Ticket>()
@@ -48,6 +49,7 @@ class MainActivity : AppCompatActivity() {
     myUID = bundle.getString("uid")
 
     tweets.add(Ticket("0", "him", "url", "add"))
+    tweets.add(Ticket("0", "him", "url", "ads"))
     adapter = MyTweetAdapter(this, tweets)
     lvTweets.adapter = adapter
     loadPosts()
@@ -55,7 +57,6 @@ class MainActivity : AppCompatActivity() {
 
   inner class MyTweetAdapter(context: Context, var listTweetsAdapter: ArrayList<Ticket>) : BaseAdapter() {
     var context: Context? = context
-
     override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View {
       var myTweet = listTweetsAdapter[p0]
 
@@ -72,6 +73,14 @@ class MainActivity : AppCompatActivity() {
           myRef.child("posts").push().setValue(postInfo)
         })
 
+        return myView
+      } else if (myTweet.tweetPersonUID.equals("loading")) {
+        return layoutInflater.inflate(R.layout.loading_ticket, null)
+      } else if (myTweet.tweetPersonUID.equals("ads")) {
+        val myView = layoutInflater.inflate(R.layout.ads_ticket, null)
+        val mAdView = myView.findViewById(R.id.adView) as AdView
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
         return myView
       } else {
         val myView = layoutInflater.inflate(R.layout.tweets_ticket, null)
@@ -118,8 +127,6 @@ class MainActivity : AppCompatActivity() {
       return listTweetsAdapter.size
 
     }
-
-
   }
 
   private fun loadImage() {
@@ -143,7 +150,10 @@ class MainActivity : AppCompatActivity() {
   }
 
 
-  fun uploadImage(bitmap: Bitmap) {
+  private fun uploadImage(bitmap: Bitmap) {
+    tweets.add(0, Ticket("0", "him", "url", "loading"))
+    adapter!!.notifyDataSetChanged();
+
     val storage = FirebaseStorage.getInstance()
     val storageRef = storage.getReferenceFromUrl("gs://twitterdemo-8d095.appspot.com")
     val df = SimpleDateFormat("ddMMyyHHmmss")
@@ -159,6 +169,8 @@ class MainActivity : AppCompatActivity() {
       Toast.makeText(this, "Fail to upload", Toast.LENGTH_LONG).show()
     }.addOnSuccessListener { taskSnapshot ->
       downloadURL = taskSnapshot.uploadSessionUri.toString()
+      tweets.removeAt(0)
+      adapter!!.notifyDataSetChanged();
     }
   }
 
@@ -168,6 +180,7 @@ class MainActivity : AppCompatActivity() {
         try {
           tweets.clear()
           tweets.add(Ticket("0", "him", "url", "add"))
+          tweets.add(Ticket("0", "him", "url", "ads"))
           val td = dataSnapshot.value as HashMap<String, Any>
           for (key in td.keys) {
             val post = td[key] as HashMap<String, Any>
