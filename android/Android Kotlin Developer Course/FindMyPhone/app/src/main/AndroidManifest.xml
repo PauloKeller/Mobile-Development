@@ -9,7 +9,7 @@
         android:roundIcon="@drawable/dmap"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MyTrackers"></activity>
+        <activity android:name=".MyTrackers" android:label="Contact"/>
         <activity android:name=".Login" />
         <activity android:name=".MainActivity">
             <intent-filter>
