@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.ContactsContract
 import android.view.*
+import android.widget.Adapter
+import android.widget.AdapterView
 import android.widget.BaseAdapter
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
@@ -16,15 +18,26 @@ import kotlinx.android.synthetic.main.activity_my_trackers.*
 import kotlinx.android.synthetic.main.contact_ticket.view.*
 
 class MyTrackers : AppCompatActivity() {
-    private val contacts = ArrayList<UserContact>()
-    private val adapter = ContactAdapter(this, contacts)
+    var adapter:ContactAdapter?=null
+    var contacts=ArrayList<UserContact>()
     private val CONTACT_CODE = 123
     private val PICK_CODE = 131
+    private var userData:UserData? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_trackers)
+        userData = UserData(this)
+        adapter = ContactAdapter(this,contacts)
         lvContactList.adapter = adapter
+        lvContactList.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
+            val userInfo = contacts[position]
+            UserData.myTrackers.remove(userInfo.phoneNumber)
+            refreshData()
+        }
+
+        userData!!.loadContactInfo()
+        refreshData()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -73,24 +86,38 @@ class MyTrackers : AppCompatActivity() {
         startActivityForResult(intent, PICK_CODE)
     }
 
+    fun refreshData() {
+        contacts.clear()
+
+        for ((key, value) in UserData.myTrackers) {
+            contacts.add(UserContact(value, key))
+        }
+
+        adapter!!.notifyDataSetChanged()
+    }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         when (requestCode) {
             PICK_CODE -> {
-                if ((requestCode == Activity.RESULT_OK) && (data != null)) {
+                if ((resultCode == Activity.RESULT_OK) && (data != null)) {
                     val contactData = data.data
                     val mContentResolver = contentResolver.query(contactData!!, null, null, null, null)
                     if (mContentResolver!!.moveToFirst()) {
                         val id = mContentResolver.getString(mContentResolver.getColumnIndexOrThrow(ContactsContract.Contacts._ID))
                         val hasPhone = mContentResolver.getString(mContentResolver.getColumnIndexOrThrow(ContactsContract.Contacts.HAS_PHONE_NUMBER))
                         if (hasPhone != "1") {
-                            val phones = contentResolver.query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
-                                    null, ContactsContract.CommonDataKinds.Phone.CONTACT_ID + "=" + id, null, null)
+                            val phones = contentResolver.query(
+                                ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
+                                null, ContactsContract.CommonDataKinds.Phone.CONTACT_ID + "=" + id, null, null
+                            )
                             phones!!.moveToFirst()
                             val phoneNumber = phones.getString(mContentResolver.getColumnIndex("data1"))
                             val name = phones.getString(mContentResolver.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME))
-                            contacts.add(UserContact(name, phoneNumber))
-                            adapter.notifyDataSetChanged()
+
+                            UserData.myTrackers[UserData.formatPhoneNumber(phoneNumber)] = name
+                            refreshData()
+                            userData!!.saveContactInfo()
                         }
                     }
                 }
@@ -115,7 +142,7 @@ class MyTrackers : AppCompatActivity() {
         }
 
         override fun getItemId(p0: Int): Long {
-            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            return p0.toLong()
         }
 
         override fun getCount(): Int {
