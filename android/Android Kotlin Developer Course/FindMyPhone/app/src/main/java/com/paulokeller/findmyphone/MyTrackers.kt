@@ -14,26 +14,34 @@ import android.widget.AdapterView
 import android.widget.BaseAdapter
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
+import com.google.firebase.database.FirebaseDatabase
+import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_my_trackers.*
 import kotlinx.android.synthetic.main.contact_ticket.view.*
 
 class MyTrackers : AppCompatActivity() {
-    var adapter:ContactAdapter?=null
-    var contacts=ArrayList<UserContact>()
+    var adapter: ContactAdapter? = null
+    var contacts = ArrayList<UserContact>()
     private val CONTACT_CODE = 123
     private val PICK_CODE = 131
-    private var userData:UserData? = null
+    private var userData: UserData? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_trackers)
         userData = UserData(this)
-        adapter = ContactAdapter(this,contacts)
+        adapter = ContactAdapter(this, contacts)
         lvContactList.adapter = adapter
         lvContactList.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
             val userInfo = contacts[position]
             UserData.myTrackers.remove(userInfo.phoneNumber)
             refreshData()
+
+            userData!!.saveContactInfo()
+
+            val mDatabase = FirebaseDatabase.getInstance().reference
+            val userData = UserData(applicationContext)
+            mDatabase.child("Users").child(userInfo.phoneNumber).child("Finders").child(userData.loadPhoneNumber()).removeValue()
         }
 
         userData!!.loadContactInfo()
@@ -118,6 +126,10 @@ class MyTrackers : AppCompatActivity() {
                             UserData.myTrackers[UserData.formatPhoneNumber(phoneNumber)] = name
                             refreshData()
                             userData!!.saveContactInfo()
+
+                            val mDatabase = FirebaseDatabase.getInstance().reference
+                            val userData = UserData(applicationContext)
+                            mDatabase.child("Users").child(phoneNumber).child("Finders").child(userData.loadPhoneNumber()).setValue(true)
                         }
                     }
                 }

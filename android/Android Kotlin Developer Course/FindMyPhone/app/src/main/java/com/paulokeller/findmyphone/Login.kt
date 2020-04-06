@@ -46,10 +46,9 @@ class Login : AppCompatActivity() {
         val userData = UserData(this)
         userData.savePhone(etPhoneNumber.text.toString())
 
-        // get datatime
         val df = SimpleDateFormat("yyyy/MMM/dd HH:MM:ss")
         val date = Date()
-        // save to database
+
         val mDatabase = FirebaseDatabase.getInstance().reference
         mDatabase.child("Users").child(etPhoneNumber.text.toString()).child("request").setValue(df.format(date).toString())
         mDatabase.child("Users").child(etPhoneNumber.text.toString()).child("Finders").setValue(df.format(date).toString())

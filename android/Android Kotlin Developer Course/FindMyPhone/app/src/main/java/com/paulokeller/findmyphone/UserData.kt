@@ -15,13 +15,18 @@ class UserData(val context: Context?) {
 
     fun loadPhoneNumber(): String {
         val value = sharedPreferences.getString("phoneNumber", "empty")
+        return value!!
+    }
+
+    fun isFirstTimeLoad() {
+        val value = sharedPreferences.getString("phoneNumber", "empty")
         if (value == "empty") {
             val intent = Intent(context, Login::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             context!!.startActivity(intent)
         }
-        return value!!
     }
+
 
     fun saveContactInfo() {
         var listOfTrackers = ""
