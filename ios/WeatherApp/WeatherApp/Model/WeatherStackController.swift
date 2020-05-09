@@ -1,34 +1,36 @@
 //
-//  OpenWeatherMapController.swift
+//  WeatherStackController.swift
 //  WeatherApp
 //
-//  Created by Paulo Keller on 07/05/20.
+//  Created by Paulo Keller on 09/05/20.
 //  Copyright © 2020 Paulo Keller. All rights reserved.
 //
 
 import Foundation
 
+// To get your API key, follow the steps at https://weatherstack.com/signup
 private enum API {
-    static let key = "afc309eadf72c1bd45cda2b2cced04c7"
+    static let key = "5a199cf437729ee14a43ef2cd88ef686"
 }
 
-class OpenWeatherMapController: WebServiceController {
+final class WeatherStackController: WebServiceController {
     let fallbackService: WebServiceController?
     
-    required init(fallbackService: WebServiceController? = nil) {
+    init(fallbackService: WebServiceController? = nil) {
         self.fallbackService = fallbackService
     }
     
     func fetchWeather(for city: String, completionHandler: @escaping (String?, WebServiceControllerError?) -> Void) {
-        let endpoint = "https://api.openweathermap.org/data/2.5/find?q=\(city)&units=imperial&appid=\(API.key)"
+        let endpoint = "http://api.weatherstack.com/current?access_key=\(API.key)&query=\(city)&units=f"
         
-        guard let safeURLString = endpoint.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed),
-            let endpointURL = URL(string: safeURLString) else {
-                completionHandler(nil, WebServiceControllerError.invalidURL(endpoint))
-                return
+        let safeURLString = endpoint.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+        
+        guard let endpointURL = URL(string: safeURLString) else {
+            completionHandler(nil, WebServiceControllerError.invalidURL(safeURLString))
+            return
         }
         
-        let dataTask = URLSession.shared.dataTask(with: endpointURL) { (data, response, error) in
+        let dataTask = URLSession.shared.dataTask(with: endpointURL, completionHandler: { (data, response, error) -> Void in
             guard error == nil else {
                 if let fallback = self.fallbackService{
                     fallback.fetchWeather(for: city, completionHandler: completionHandler)
@@ -57,13 +59,13 @@ class OpenWeatherMapController: WebServiceController {
                         return
                 }
                 
-                let weatherDescription = "\(weather) \(temperature) 'F"
+                let weatherDescription = "\(weather) \(temperature) °F"
                 completionHandler(weatherDescription, nil)
             } catch let error {
                 completionHandler(nil, WebServiceControllerError.forwarded(error))
             }
-        }
+        })
         
-         dataTask.resume()
+        dataTask.resume()
     }
 }

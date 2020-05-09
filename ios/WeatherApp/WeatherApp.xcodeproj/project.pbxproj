@@ -16,6 +16,9 @@
 		B86B79CB2464727300A9AB04 /* WebServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86B79CA2464727300A9AB04 /* WebServiceController.swift */; };
 		B86B79CD2464747F00A9AB04 /* OpenWeatherMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86B79CC2464747F00A9AB04 /* OpenWeatherMapController.swift */; };
 		B86B79D02464E61400A9AB04 /* OpenWeatherMapData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86B79CF2464E61400A9AB04 /* OpenWeatherMapData.swift */; };
+		B895C1552467041F0091410F /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B895C1542467041F0091410F /* WeatherViewModel.swift */; };
+		B895C157246707400091410F /* WeatherStackData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B895C156246707400091410F /* WeatherStackData.swift */; };
+		B895C15924670B540091410F /* WeatherStackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B895C15824670B540091410F /* WeatherStackController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		B86B79CA2464727300A9AB04 /* WebServiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceController.swift; sourceTree = "<group>"; };
 		B86B79CC2464747F00A9AB04 /* OpenWeatherMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapController.swift; sourceTree = "<group>"; };
 		B86B79CF2464E61400A9AB04 /* OpenWeatherMapData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapData.swift; sourceTree = "<group>"; };
+		B895C1542467041F0091410F /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		B895C156246707400091410F /* WeatherStackData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherStackData.swift; sourceTree = "<group>"; };
+		B895C15824670B540091410F /* WeatherStackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherStackController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 		B86B79B42464708300A9AB04 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				B895C153246704000091410F /* ViewModel */,
 				B86B79C92464725A00A9AB04 /* Model */,
 				B86B79B52464708300A9AB04 /* AppDelegate.swift */,
 				B86B79B72464708300A9AB04 /* SceneDelegate.swift */,
@@ -88,6 +95,7 @@
 				B86B79CE2464E5ED00A9AB04 /* JSONMappers */,
 				B86B79CA2464727300A9AB04 /* WebServiceController.swift */,
 				B86B79CC2464747F00A9AB04 /* OpenWeatherMapController.swift */,
+				B895C15824670B540091410F /* WeatherStackController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -96,8 +104,17 @@
 			isa = PBXGroup;
 			children = (
 				B86B79CF2464E61400A9AB04 /* OpenWeatherMapData.swift */,
+				B895C156246707400091410F /* WeatherStackData.swift */,
 			);
 			path = JSONMappers;
+			sourceTree = "<group>";
+		};
+		B895C153246704000091410F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B895C1542467041F0091410F /* WeatherViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,10 +189,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B86B79CD2464747F00A9AB04 /* OpenWeatherMapController.swift in Sources */,
+				B895C157246707400091410F /* WeatherStackData.swift in Sources */,
 				B86B79CB2464727300A9AB04 /* WebServiceController.swift in Sources */,
 				B86B79B62464708300A9AB04 /* AppDelegate.swift in Sources */,
+				B895C1552467041F0091410F /* WeatherViewModel.swift in Sources */,
 				B86B79B82464708300A9AB04 /* SceneDelegate.swift in Sources */,
 				B86B79BA2464708300A9AB04 /* ContentView.swift in Sources */,
+				B895C15924670B540091410F /* WeatherStackController.swift in Sources */,
 				B86B79D02464E61400A9AB04 /* OpenWeatherMapData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
