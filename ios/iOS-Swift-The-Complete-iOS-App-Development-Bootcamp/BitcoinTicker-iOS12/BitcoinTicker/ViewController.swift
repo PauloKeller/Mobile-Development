@@ -60,7 +60,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     func getBitcoinData(url: String) {
         AF.request(url, method: .get)
             .responseJSON { response in
-                
                 switch(response.result) {
                 case .success(let value):
                     print("Sucess! Got the bitcoin data")
