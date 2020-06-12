@@ -1,0 +1,79 @@
+PODS:
+  - IBMSwiftSDKCore (1.0.0)
+  - IBMWatsonAssistantV1 (3.5.0):
+    - IBMSwiftSDKCore (~> 1.0.0)
+  - IBMWatsonAssistantV2 (3.5.0):
+    - IBMSwiftSDKCore (~> 1.0.0)
+  - IBMWatsonCompareComplyV1 (3.5.0):
+    - IBMSwiftSDKCore (~> 1.0.0)
+  - IBMWatsonDiscoveryV1 (3.5.0):
+    - IBMSwiftSDKCore (~> 1.0.0)
+  - IBMWatsonLanguageTranslatorV3 (3.5.0):
+    - IBMSwiftSDKCore (~> 1.0.0)
+  - IBMWatsonNaturalLanguageClassifierV1 (3.5.0):
+    - IBMSwiftSDKCore (~> 1.0.0)
+  - IBMWatsonNaturalLanguageUnderstandingV1 (3.5.0):
+    - IBMSwiftSDKCore (~> 1.0.0)
+  - IBMWatsonPersonalityInsightsV3 (3.5.0):
+    - IBMSwiftSDKCore (~> 1.0.0)
+  - IBMWatsonSpeechToTextV1 (3.5.0):
+    - IBMSwiftSDKCore (~> 1.0.0)
+    - Starscream (= 3.0.5)
+  - IBMWatsonTextToSpeechV1 (3.5.0):
+    - IBMSwiftSDKCore (~> 1.0.0)
+  - IBMWatsonToneAnalyzerV3 (3.5.0):
+    - IBMSwiftSDKCore (~> 1.0.0)
+  - IBMWatsonVisualRecognitionV3 (3.5.0):
+    - IBMSwiftSDKCore (~> 1.0.0)
+  - Starscream (3.0.5)
+
+DEPENDENCIES:
+  - IBMWatsonAssistantV1 (~> 3.5.0)
+  - IBMWatsonAssistantV2 (~> 3.5.0)
+  - IBMWatsonCompareComplyV1 (~> 3.5.0)
+  - IBMWatsonDiscoveryV1 (~> 3.5.0)
+  - IBMWatsonLanguageTranslatorV3 (~> 3.5.0)
+  - IBMWatsonNaturalLanguageClassifierV1 (~> 3.5.0)
+  - IBMWatsonNaturalLanguageUnderstandingV1 (~> 3.5.0)
+  - IBMWatsonPersonalityInsightsV3 (~> 3.5.0)
+  - IBMWatsonSpeechToTextV1 (~> 3.5.0)
+  - IBMWatsonTextToSpeechV1 (~> 3.5.0)
+  - IBMWatsonToneAnalyzerV3 (~> 3.5.0)
+  - IBMWatsonVisualRecognitionV3 (~> 3.5.0)
+
+SPEC REPOS:
+  trunk:
+    - IBMSwiftSDKCore
+    - IBMWatsonAssistantV1
+    - IBMWatsonAssistantV2
+    - IBMWatsonCompareComplyV1
+    - IBMWatsonDiscoveryV1
+    - IBMWatsonLanguageTranslatorV3
+    - IBMWatsonNaturalLanguageClassifierV1
+    - IBMWatsonNaturalLanguageUnderstandingV1
+    - IBMWatsonPersonalityInsightsV3
+    - IBMWatsonSpeechToTextV1
+    - IBMWatsonTextToSpeechV1
+    - IBMWatsonToneAnalyzerV3
+    - IBMWatsonVisualRecognitionV3
+    - Starscream
+
+SPEC CHECKSUMS:
+  IBMSwiftSDKCore: 54ad77b03a4d27b218ba514580197db3b89a96ca
+  IBMWatsonAssistantV1: 3f78813a06b9a258836c94faf14e17bd87b23572
+  IBMWatsonAssistantV2: 8d9c16fe8c929ee1e478afbe0adfc0415f82a02c
+  IBMWatsonCompareComplyV1: 229a7463b241c3121a8bd63a034eb4778c74b8e0
+  IBMWatsonDiscoveryV1: e9d5be7496b7153e6d59bd7525d0e7d04aba7cea
+  IBMWatsonLanguageTranslatorV3: dfe75685c93fa30ea5a8f0e3d3a1275d24d03259
+  IBMWatsonNaturalLanguageClassifierV1: e64cd1644d7e5602f13171f1fdab640d2c367a07
+  IBMWatsonNaturalLanguageUnderstandingV1: 7239af20262632e5cbdbccfe87a0face0b069de5
+  IBMWatsonPersonalityInsightsV3: ac747c7ffeb0a7ed3a73a2951fd33a61dfdeb106
+  IBMWatsonSpeechToTextV1: 248839b010c4d3b6fd27749f7c0acf3f1f377dd6
+  IBMWatsonTextToSpeechV1: 8aaf51b8c0ba93ce2d99808bf09a430a88f41fe4
+  IBMWatsonToneAnalyzerV3: c17fee66f3674aef01c50821834681a6a0c3ec8f
+  IBMWatsonVisualRecognitionV3: 68a64719eb3afd6ec228da38bc183c7d9d9120ff
+  Starscream: faf918b2f2eff7d5dd21180646bf015a669673bd
+
+PODFILE CHECKSUM: d9369bd2cbfa3cfcdafffd555daf48de613d9cd8
+
+COCOAPODS: 1.9.3
