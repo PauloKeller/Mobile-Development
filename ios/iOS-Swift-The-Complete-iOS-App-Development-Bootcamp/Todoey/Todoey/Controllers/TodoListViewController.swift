@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class TodoListViewController: UITableViewController {
+class TodoListViewController: SwipeTableViewController {
     
     var itemResults: Results<ItemModel>?
     let realm = try! Realm()
@@ -20,10 +20,18 @@ class TodoListViewController: UITableViewController {
         }
     }
     
-    let todoCellIdentifier = "ToDoItemCell"
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let category = selectedCategory {
+            guard let navBar = navigationController?.navigationBar else { fatalError("Navigation controller does not exist.") }
+            
+            title = category.name
+            navBar.barTintColor = .darkGray
+            navBar.tintColor = .white
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,7 +39,7 @@ class TodoListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: todoCellIdentifier, for: indexPath)
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
         let item = itemResults?[indexPath.row]
         
         cell.textLabel?.text = item?.title ?? "No items added"
@@ -97,6 +105,18 @@ class TodoListViewController: UITableViewController {
     func loadItems() {
         itemResults = selectedCategory?.items.sorted(byKeyPath: "title", ascending: true)
     }
+    
+    override func updateModel(at indexPath: IndexPath) {
+        if let item = self.itemResults?[indexPath.row] {
+            do {
+                try self.realm.write {
+                    self.realm.delete(item)
+                }
+            } catch {
+                print("Error deleting item \(error)")
+            }
+        }
+    }
 }
 
 // MARK: - SearchBar Delegate Methods
@@ -118,4 +138,3 @@ extension TodoListViewController: UISearchBarDelegate {
         }
     }
 }
-

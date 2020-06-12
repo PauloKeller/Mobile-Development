@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A04736F249311D500EE2F54 /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A04736E249311D500EE2F54 /* SwipeTableViewController.swift */; };
 		3A8BE6A7248C196A00434564 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8BE6A6248C196A00434564 /* AppDelegate.swift */; };
 		3A8BE6A9248C196A00434564 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8BE6A8248C196A00434564 /* SceneDelegate.swift */; };
 		3A8BE6AE248C196A00434564 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8BE6AC248C196A00434564 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A04736E249311D500EE2F54 /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		3A8BE6A3248C196A00434564 /* Todoey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todoey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8BE6A6248C196A00434564 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A8BE6A8248C196A00434564 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			children = (
 				3A8CF824248D857D00326065 /* CategoryTableViewController.swift */,
 				3A8BE6BD248C21EB00434564 /* TodoListViewController.swift */,
+				3A04736E249311D500EE2F54 /* SwipeTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A04736F249311D500EE2F54 /* SwipeTableViewController.swift in Sources */,
 				3A8BE6BE248C21EB00434564 /* TodoListViewController.swift in Sources */,
 				3A8BE6A7248C196A00434564 /* AppDelegate.swift in Sources */,
 				3A8CF825248D857D00326065 /* CategoryTableViewController.swift in Sources */,
