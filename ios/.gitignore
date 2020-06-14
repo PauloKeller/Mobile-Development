@@ -30,3 +30,6 @@ Pods/
 # Carthage
 Carthage/Checkouts
 Carthage/Build
+
+# mlmodels
+*.mlmodel
