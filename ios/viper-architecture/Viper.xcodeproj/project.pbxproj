@@ -33,6 +33,7 @@
 		3A0CAA5324900FA900B8766E /* TripDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0CAA5224900FA900B8766E /* TripDetailPresenter.swift */; };
 		3A0CAA5524900FB500B8766E /* TripDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0CAA5424900FB500B8766E /* TripDetailInteractor.swift */; };
 		3A0CAA572490102600B8766E /* TripListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0CAA562490102600B8766E /* TripListRouter.swift */; };
+		3A59044F24C74D9900C8031C /* TripMapViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A59044E24C74D9900C8031C /* TripMapViewPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		3A0CAA5224900FA900B8766E /* TripDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailPresenter.swift; sourceTree = "<group>"; };
 		3A0CAA5424900FB500B8766E /* TripDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailInteractor.swift; sourceTree = "<group>"; };
 		3A0CAA562490102600B8766E /* TripListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListRouter.swift; sourceTree = "<group>"; };
+		3A59044E24C74D9900C8031C /* TripMapViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMapViewPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				0A8BE47D23ECC56F00C24F52 /* Entities */,
 				0AEABEDA23EF7E1B00FD3972 /* Data Sources */,
 				0A20EFA9240EA73A00A0CA27 /* WaypointModule */,
+				3A59044D24C74D7400C8031C /* TripMap */,
 				3A0CAA4F24900F8000B8766E /* TripDetail */,
 				3A0CAA4A2490069700B8766E /* TripList */,
 				0A83577D23D6996E00D83533 /* default.json */,
@@ -191,6 +194,14 @@
 				3A0CAA5424900FB500B8766E /* TripDetailInteractor.swift */,
 			);
 			path = TripDetail;
+			sourceTree = "<group>";
+		};
+		3A59044D24C74D7400C8031C /* TripMap */ = {
+			isa = PBXGroup;
+			children = (
+				3A59044E24C74D9900C8031C /* TripMapViewPresenter.swift */,
+			);
+			path = TripMap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A59044F24C74D9900C8031C /* TripMapViewPresenter.swift in Sources */,
 				0A78DB8E23E799E400934DD4 /* SplitImage.swift in Sources */,
 				0A624E0123E7A44D00212508 /* ImageDataProvider.swift in Sources */,
 				3A0CAA5324900FA900B8766E /* TripDetailPresenter.swift in Sources */,
