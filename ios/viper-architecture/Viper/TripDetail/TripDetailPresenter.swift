@@ -36,6 +36,8 @@ class TripDetailPresenter: ObservableObject {
     
     private var cancellables = Set<AnyCancellable>()
     
+    private let router: TripDetailRouter
+    
     @Published var tripName: String = "No name"
     let setTripName: Binding<String>
     
@@ -44,7 +46,7 @@ class TripDetailPresenter: ObservableObject {
     
     init(interactor: TripDetailInteractor) {
         self.interactor = interactor
-        
+        self.router = TripDetailRouter(mapProvider: interactor.mapInfoProvider)
         // 1
         setTripName = Binding<String>(
           get: { interactor.tripName },
@@ -69,5 +71,29 @@ class TripDetailPresenter: ObservableObject {
     
     func save() {
       interactor.save()
+    }
+    
+    func makeMapView() -> some View {
+       TripMapView(presenter: TripMapViewPresenter(interactor: interactor))
+    }
+    
+    func addWaypoint() {
+      interactor.addWaypoint()
+    }
+
+    func didMoveWaypoint(fromOffsets: IndexSet, toOffset: Int) {
+      interactor.moveWaypoint(fromOffsets: fromOffsets, toOffset: toOffset)
+    }
+
+    func didDeleteWaypoint(_ atOffsets: IndexSet) {
+      interactor.deleteWaypoint(atOffsets: atOffsets)
+    }
+
+    func cell(for waypoint: Waypoint) -> some View {
+      let destination = router.makeWaypointView(for: waypoint)
+        .onDisappear(perform: interactor.updateWaypoints)
+      return NavigationLink(destination: destination) {
+        Text(waypoint.name)
+      }
     }
 }
