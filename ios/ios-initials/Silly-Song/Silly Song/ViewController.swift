@@ -33,14 +33,14 @@ class ViewController: UIViewController {
     
     @IBAction func displayLyrics(sender: AnyObject) {
     }
-    
-    // MARK: - UITextFieldDelegate
-    extension ViewController: UITextFieldDelegate {
-        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-            textField.resignFirstResponder()
-            return false
-        }
-    }
 
+}
+
+// MARK: - UITextFieldDelegate
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return false
+    }
 }
 

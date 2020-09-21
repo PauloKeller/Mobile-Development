@@ -65,13 +65,13 @@ extension GifEditorViewController {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
-    func keyboardWillShow(notification: NSNotification) {
+    @objc func keyboardWillShow(notification: NSNotification) {
         if view.frame.origin.y >= 0 {
             view.frame.origin.y -= getKeyboardHeight(notification: notification)
         }
     }
     
-    func keyboardWillHide(notification: NSNotification) {
+    @objc func keyboardWillHide(notification: NSNotification) {
         if (self.view.frame.origin.y < 0) {
             view.frame.origin.y += getKeyboardHeight(notification: notification)
         }
