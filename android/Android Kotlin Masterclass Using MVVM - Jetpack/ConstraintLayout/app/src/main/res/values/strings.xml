@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ConstraintLayout</string>
+    <string name="android_course">Android Dev</string>
+    <string name="user_name">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="login_user">Login</string>
+</resources>

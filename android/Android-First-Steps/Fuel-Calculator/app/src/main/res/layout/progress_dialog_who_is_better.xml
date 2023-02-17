@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="com.example.zapptsdev.calculadora_combustivel.MainActivity"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/label_who_is_better"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:fontFamily="robot-regular"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/label_who_is_better"
+        android:textColor="@android:color/black"/>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="12dp">
+        <ImageView
+            android:id="@+id/image_view_who_is_better"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ethanol"/>
+        <View
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/scrim"/>
+        <TextView
+            android:id="@+id/label_who_is_better_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:fontFamily="robot-regular"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/label_ethanol"
+            android:textColor="@android:color/white"/>
+    </FrameLayout>
+
+
+
+</LinearLayout>

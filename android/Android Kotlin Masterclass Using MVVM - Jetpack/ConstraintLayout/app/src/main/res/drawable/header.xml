@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <solid android:color="#6ec6ff" tools:ignore="NewApi"/>
+    <corners android:radius="30dp"/>
+    <size
+        android:height="15dp"
+        android:width="15dp"/>
+</shape>

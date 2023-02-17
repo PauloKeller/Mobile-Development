@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "855847741223",
+    "firebase_url": "https://twitterdemo-8d095.firebaseio.com",
+    "project_id": "twitterdemo-8d095",
+    "storage_bucket": "twitterdemo-8d095.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855847741223:android:ab94b7ddb28c3d8d35eb02",
+        "android_client_info": {
+          "package_name": "com.paulokeller.twitterdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "855847741223-45a9i41rs5s8q0dldk9ugjn4n1ua51sh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAJhzdnPNza8IaqfWEiXLufR26JIGkR5A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "855847741223-45a9i41rs5s8q0dldk9ugjn4n1ua51sh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,11 @@
+{
+  "extends": "rallycoding",
+  "rules": {
+    "comma-dangle": "warn",
+    "no-unused-vars": "warn",
+    "no-new": 0,
+    "camelcase": 0,    
+    "import/prefer-default-export": "warn",
+    "arrow-body-style": "warn"
+  }
+}
