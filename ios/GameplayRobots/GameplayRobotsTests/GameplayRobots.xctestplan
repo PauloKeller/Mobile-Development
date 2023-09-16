@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "11A246CB-A1C2-44B7-8674-E26283535566",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:GameplayRobots.xcodeproj",
+      "identifier" : "B800C1342A74609400179888",
+      "name" : "GameplayRobots"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:GameplayRobots.xcodeproj",
+        "identifier" : "B800C1442A74609500179888",
+        "name" : "GameplayRobotsTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:GameplayRobots.xcodeproj",
+        "identifier" : "B800C14E2A74609500179888",
+        "name" : "GameplayRobotsUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
