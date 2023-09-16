@@ -1,0 +1,952 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3AE57915AE47C5FEEE9826C8 /* Pods_SmashBrosUltimate_SmashBrosUltimateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259CEFE72ED557EB419AB784 /* Pods_SmashBrosUltimate_SmashBrosUltimateUITests.framework */; };
+		B81C05A12798CF450029B9F5 /* AllGamesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81C05A02798CF450029B9F5 /* AllGamesViewModel.swift */; };
+		B81C05A62799FC3D0029B9F5 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81C05A52799FC3D0029B9F5 /* OnboardingView.swift */; };
+		B8272D3F279B5610005DE740 /* FighterDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8272D3E279B5610005DE740 /* FighterDetailsView.swift */; };
+		B8272D42279B67C0005DE740 /* UniverseFilterSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8272D41279B67C0005DE740 /* UniverseFilterSelector.swift */; };
+		B829F1322796377600BA28F6 /* SmashBrosUltimateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B829F1312796377600BA28F6 /* SmashBrosUltimateApp.swift */; };
+		B829F1342796377600BA28F6 /* AllGamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B829F1332796377600BA28F6 /* AllGamesView.swift */; };
+		B829F1362796377900BA28F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B829F1352796377900BA28F6 /* Assets.xcassets */; };
+		B829F1392796377900BA28F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B829F1382796377900BA28F6 /* Preview Assets.xcassets */; };
+		B829F1432796377900BA28F6 /* SmashBrosUltimateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B829F1422796377900BA28F6 /* SmashBrosUltimateTests.swift */; };
+		B829F14D2796377900BA28F6 /* SmashBrosUltimateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B829F14C2796377900BA28F6 /* SmashBrosUltimateUITests.swift */; };
+		B829F14F2796377900BA28F6 /* SmashBrosUltimateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B829F14E2796377900BA28F6 /* SmashBrosUltimateUITestsLaunchTests.swift */; };
+		B829F15D279638C500BA28F6 /* SBUBaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B829F15C279638C500BA28F6 /* SBUBaseProvider.swift */; };
+		B829F16027963B2000BA28F6 /* SBUUniverseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B829F15F27963B2000BA28F6 /* SBUUniverseModel.swift */; };
+		B829F163279640AD00BA28F6 /* SBUApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B829F162279640AD00BA28F6 /* SBUApiProvider.swift */; };
+		B8671A1A279B305A003B203E /* SharedPreferencesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8671A19279B305A003B203E /* SharedPreferencesManager.swift */; };
+		B8671A1C279B4D0A003B203E /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8671A1B279B4D0A003B203E /* OnboardingViewModel.swift */; };
+		B8BA75A727976BEC000DC2CD /* SBUFighterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BA75A627976BEC000DC2CD /* SBUFighterModel.swift */; };
+		B8BA75AA2797710C000DC2CD /* SBURepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BA75A92797710C000DC2CD /* SBURepository.swift */; };
+		B8DBB3CB279A349F006E721C /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DBB3CA279A349F006E721C /* PageView.swift */; };
+		B8DBB3CE279A3945006E721C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DBB3CD279A3945006E721C /* Colors.swift */; };
+		B8DBB3D0279A3C8B006E721C /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DBB3CF279A3C8B006E721C /* View.swift */; };
+		B8DBB3D3279A44CF006E721C /* OnboardingWalkthrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DBB3D2279A44CF006E721C /* OnboardingWalkthrough.swift */; };
+		B8DBB3D7279A450D006E721C /* FighterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DBB3D6279A450D006E721C /* FighterCard.swift */; };
+		B8DBB3DA279A453E006E721C /* FighterScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DBB3D9279A453E006E721C /* FighterScrollView.swift */; };
+		C1413F9DA27D08F5012A4C37 /* Pods_SmashBrosUltimateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB3DACDBC1694DAABCE115D /* Pods_SmashBrosUltimateTests.framework */; };
+		E24FF232B300E0C43E33430E /* Pods_SmashBrosUltimate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA92906E9B8AE6086FFE59AB /* Pods_SmashBrosUltimate.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B829F13F2796377900BA28F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B829F1262796377600BA28F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B829F12D2796377600BA28F6;
+			remoteInfo = SmashBrosUltimate;
+		};
+		B829F1492796377900BA28F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B829F1262796377600BA28F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B829F12D2796377600BA28F6;
+			remoteInfo = SmashBrosUltimate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09373795365473B6D08CC3EF /* Pods-SmashBrosUltimateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmashBrosUltimateTests.release.xcconfig"; path = "Target Support Files/Pods-SmashBrosUltimateTests/Pods-SmashBrosUltimateTests.release.xcconfig"; sourceTree = "<group>"; };
+		0ECE113331591246E84FF63A /* Pods-SmashBrosUltimate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmashBrosUltimate.release.xcconfig"; path = "Target Support Files/Pods-SmashBrosUltimate/Pods-SmashBrosUltimate.release.xcconfig"; sourceTree = "<group>"; };
+		259CEFE72ED557EB419AB784 /* Pods_SmashBrosUltimate_SmashBrosUltimateUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmashBrosUltimate_SmashBrosUltimateUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EB3DACDBC1694DAABCE115D /* Pods_SmashBrosUltimateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmashBrosUltimateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7355F1C7D9362B9990463538 /* Pods-SmashBrosUltimateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmashBrosUltimateTests.debug.xcconfig"; path = "Target Support Files/Pods-SmashBrosUltimateTests/Pods-SmashBrosUltimateTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A42246C2741704A0C08F6D8 /* Pods-SmashBrosUltimate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmashBrosUltimate.debug.xcconfig"; path = "Target Support Files/Pods-SmashBrosUltimate/Pods-SmashBrosUltimate.debug.xcconfig"; sourceTree = "<group>"; };
+		A93385CA733881087C1E4CBF /* Pods-SmashBrosUltimate-SmashBrosUltimateUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmashBrosUltimate-SmashBrosUltimateUITests.debug.xcconfig"; path = "Target Support Files/Pods-SmashBrosUltimate-SmashBrosUltimateUITests/Pods-SmashBrosUltimate-SmashBrosUltimateUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AA92906E9B8AE6086FFE59AB /* Pods_SmashBrosUltimate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmashBrosUltimate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B81C05A02798CF450029B9F5 /* AllGamesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGamesViewModel.swift; sourceTree = "<group>"; };
+		B81C05A52799FC3D0029B9F5 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		B8272D3E279B5610005DE740 /* FighterDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FighterDetailsView.swift; sourceTree = "<group>"; };
+		B8272D41279B67C0005DE740 /* UniverseFilterSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniverseFilterSelector.swift; sourceTree = "<group>"; };
+		B829F12E2796377600BA28F6 /* SmashBrosUltimate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmashBrosUltimate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B829F1312796377600BA28F6 /* SmashBrosUltimateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmashBrosUltimateApp.swift; sourceTree = "<group>"; };
+		B829F1332796377600BA28F6 /* AllGamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGamesView.swift; sourceTree = "<group>"; };
+		B829F1352796377900BA28F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B829F1382796377900BA28F6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B829F13E2796377900BA28F6 /* SmashBrosUltimateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmashBrosUltimateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B829F1422796377900BA28F6 /* SmashBrosUltimateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmashBrosUltimateTests.swift; sourceTree = "<group>"; };
+		B829F1482796377900BA28F6 /* SmashBrosUltimateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmashBrosUltimateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B829F14C2796377900BA28F6 /* SmashBrosUltimateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmashBrosUltimateUITests.swift; sourceTree = "<group>"; };
+		B829F14E2796377900BA28F6 /* SmashBrosUltimateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmashBrosUltimateUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B829F15C279638C500BA28F6 /* SBUBaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBUBaseProvider.swift; sourceTree = "<group>"; };
+		B829F15F27963B2000BA28F6 /* SBUUniverseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBUUniverseModel.swift; sourceTree = "<group>"; };
+		B829F162279640AD00BA28F6 /* SBUApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBUApiProvider.swift; sourceTree = "<group>"; };
+		B8671A19279B305A003B203E /* SharedPreferencesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedPreferencesManager.swift; sourceTree = "<group>"; };
+		B8671A1B279B4D0A003B203E /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		B8BA75A627976BEC000DC2CD /* SBUFighterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBUFighterModel.swift; sourceTree = "<group>"; };
+		B8BA75A92797710C000DC2CD /* SBURepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBURepository.swift; sourceTree = "<group>"; };
+		B8DBB3CA279A349F006E721C /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		B8DBB3CD279A3945006E721C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		B8DBB3CF279A3C8B006E721C /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		B8DBB3D2279A44CF006E721C /* OnboardingWalkthrough.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingWalkthrough.swift; sourceTree = "<group>"; };
+		B8DBB3D6279A450D006E721C /* FighterCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FighterCard.swift; sourceTree = "<group>"; };
+		B8DBB3D9279A453E006E721C /* FighterScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FighterScrollView.swift; sourceTree = "<group>"; };
+		B8FA85C4BB337DCB2E39A6B7 /* Pods-SmashBrosUltimate-SmashBrosUltimateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmashBrosUltimate-SmashBrosUltimateUITests.release.xcconfig"; path = "Target Support Files/Pods-SmashBrosUltimate-SmashBrosUltimateUITests/Pods-SmashBrosUltimate-SmashBrosUltimateUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B829F12B2796377600BA28F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E24FF232B300E0C43E33430E /* Pods_SmashBrosUltimate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B829F13B2796377900BA28F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1413F9DA27D08F5012A4C37 /* Pods_SmashBrosUltimateTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B829F1452796377900BA28F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AE57915AE47C5FEEE9826C8 /* Pods_SmashBrosUltimate_SmashBrosUltimateUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B81C059D2798CEE10029B9F5 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B8272D3D279B55F4005DE740 /* FighterDetails */,
+				B81C05A42799FC2E0029B9F5 /* Onboarding */,
+				B81C059F2798CEFF0029B9F5 /* AllGames */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B81C059F2798CEFF0029B9F5 /* AllGames */ = {
+			isa = PBXGroup;
+			children = (
+				B829F1332796377600BA28F6 /* AllGamesView.swift */,
+				B81C05A02798CF450029B9F5 /* AllGamesViewModel.swift */,
+			);
+			path = AllGames;
+			sourceTree = "<group>";
+		};
+		B81C05A42799FC2E0029B9F5 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				B81C05A52799FC3D0029B9F5 /* OnboardingView.swift */,
+				B8671A1B279B4D0A003B203E /* OnboardingViewModel.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		B8272D3D279B55F4005DE740 /* FighterDetails */ = {
+			isa = PBXGroup;
+			children = (
+				B8272D3E279B5610005DE740 /* FighterDetailsView.swift */,
+			);
+			path = FighterDetails;
+			sourceTree = "<group>";
+		};
+		B8272D40279B67A6005DE740 /* UniverseFilterSelector */ = {
+			isa = PBXGroup;
+			children = (
+				B8272D41279B67C0005DE740 /* UniverseFilterSelector.swift */,
+			);
+			path = UniverseFilterSelector;
+			sourceTree = "<group>";
+		};
+		B829F1252796377600BA28F6 = {
+			isa = PBXGroup;
+			children = (
+				B829F1302796377600BA28F6 /* SmashBrosUltimate */,
+				B829F1412796377900BA28F6 /* SmashBrosUltimateTests */,
+				B829F14B2796377900BA28F6 /* SmashBrosUltimateUITests */,
+				B829F12F2796377600BA28F6 /* Products */,
+				C8946B4A4941328227CE3DF3 /* Pods */,
+				C170C7A001E7F4C0CC52E4AA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B829F12F2796377600BA28F6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B829F12E2796377600BA28F6 /* SmashBrosUltimate.app */,
+				B829F13E2796377900BA28F6 /* SmashBrosUltimateTests.xctest */,
+				B829F1482796377900BA28F6 /* SmashBrosUltimateUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B829F1302796377600BA28F6 /* SmashBrosUltimate */ = {
+			isa = PBXGroup;
+			children = (
+				B8671A18279B3048003B203E /* Managers */,
+				B8DBB3CC279A3936006E721C /* Extensions */,
+				B8DBB3C8279A3473006E721C /* Components */,
+				B81C059D2798CEE10029B9F5 /* Modules */,
+				B8BA75A8279770E8000DC2CD /* Repositories */,
+				B829F15E27963ADC00BA28F6 /* Models */,
+				B829F15B279637EC00BA28F6 /* Providers */,
+				B829F1312796377600BA28F6 /* SmashBrosUltimateApp.swift */,
+				B829F1352796377900BA28F6 /* Assets.xcassets */,
+				B829F1372796377900BA28F6 /* Preview Content */,
+			);
+			path = SmashBrosUltimate;
+			sourceTree = "<group>";
+		};
+		B829F1372796377900BA28F6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B829F1382796377900BA28F6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B829F1412796377900BA28F6 /* SmashBrosUltimateTests */ = {
+			isa = PBXGroup;
+			children = (
+				B829F1422796377900BA28F6 /* SmashBrosUltimateTests.swift */,
+			);
+			path = SmashBrosUltimateTests;
+			sourceTree = "<group>";
+		};
+		B829F14B2796377900BA28F6 /* SmashBrosUltimateUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B829F14C2796377900BA28F6 /* SmashBrosUltimateUITests.swift */,
+				B829F14E2796377900BA28F6 /* SmashBrosUltimateUITestsLaunchTests.swift */,
+			);
+			path = SmashBrosUltimateUITests;
+			sourceTree = "<group>";
+		};
+		B829F15B279637EC00BA28F6 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				B829F15C279638C500BA28F6 /* SBUBaseProvider.swift */,
+				B829F162279640AD00BA28F6 /* SBUApiProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		B829F15E27963ADC00BA28F6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B829F15F27963B2000BA28F6 /* SBUUniverseModel.swift */,
+				B8BA75A627976BEC000DC2CD /* SBUFighterModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B8671A18279B3048003B203E /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B8671A19279B305A003B203E /* SharedPreferencesManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		B8BA75A8279770E8000DC2CD /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				B8BA75A92797710C000DC2CD /* SBURepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		B8DBB3C8279A3473006E721C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B8272D40279B67A6005DE740 /* UniverseFilterSelector */,
+				B8DBB3D8279A4529006E721C /* FighterScrollView */,
+				B8DBB3D5279A44FA006E721C /* FighterCard */,
+				B8DBB3D1279A44B3006E721C /* OnboardingWalkthrough */,
+				B8DBB3C9279A3490006E721C /* PageView */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B8DBB3C9279A3490006E721C /* PageView */ = {
+			isa = PBXGroup;
+			children = (
+				B8DBB3CA279A349F006E721C /* PageView.swift */,
+			);
+			path = PageView;
+			sourceTree = "<group>";
+		};
+		B8DBB3CC279A3936006E721C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B8DBB3CD279A3945006E721C /* Colors.swift */,
+				B8DBB3CF279A3C8B006E721C /* View.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B8DBB3D1279A44B3006E721C /* OnboardingWalkthrough */ = {
+			isa = PBXGroup;
+			children = (
+				B8DBB3D2279A44CF006E721C /* OnboardingWalkthrough.swift */,
+			);
+			path = OnboardingWalkthrough;
+			sourceTree = "<group>";
+		};
+		B8DBB3D5279A44FA006E721C /* FighterCard */ = {
+			isa = PBXGroup;
+			children = (
+				B8DBB3D6279A450D006E721C /* FighterCard.swift */,
+			);
+			path = FighterCard;
+			sourceTree = "<group>";
+		};
+		B8DBB3D8279A4529006E721C /* FighterScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				B8DBB3D9279A453E006E721C /* FighterScrollView.swift */,
+			);
+			path = FighterScrollView;
+			sourceTree = "<group>";
+		};
+		C170C7A001E7F4C0CC52E4AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA92906E9B8AE6086FFE59AB /* Pods_SmashBrosUltimate.framework */,
+				259CEFE72ED557EB419AB784 /* Pods_SmashBrosUltimate_SmashBrosUltimateUITests.framework */,
+				5EB3DACDBC1694DAABCE115D /* Pods_SmashBrosUltimateTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C8946B4A4941328227CE3DF3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8A42246C2741704A0C08F6D8 /* Pods-SmashBrosUltimate.debug.xcconfig */,
+				0ECE113331591246E84FF63A /* Pods-SmashBrosUltimate.release.xcconfig */,
+				A93385CA733881087C1E4CBF /* Pods-SmashBrosUltimate-SmashBrosUltimateUITests.debug.xcconfig */,
+				B8FA85C4BB337DCB2E39A6B7 /* Pods-SmashBrosUltimate-SmashBrosUltimateUITests.release.xcconfig */,
+				7355F1C7D9362B9990463538 /* Pods-SmashBrosUltimateTests.debug.xcconfig */,
+				09373795365473B6D08CC3EF /* Pods-SmashBrosUltimateTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B829F12D2796377600BA28F6 /* SmashBrosUltimate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B829F1522796377900BA28F6 /* Build configuration list for PBXNativeTarget "SmashBrosUltimate" */;
+			buildPhases = (
+				923BF2E45D79CE4035F6795F /* [CP] Check Pods Manifest.lock */,
+				B829F12A2796377600BA28F6 /* Sources */,
+				B829F12B2796377600BA28F6 /* Frameworks */,
+				B829F12C2796377600BA28F6 /* Resources */,
+				79C867ED88468434E228B560 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmashBrosUltimate;
+			productName = SmashBrosUltimate;
+			productReference = B829F12E2796377600BA28F6 /* SmashBrosUltimate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B829F13D2796377900BA28F6 /* SmashBrosUltimateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B829F1552796377900BA28F6 /* Build configuration list for PBXNativeTarget "SmashBrosUltimateTests" */;
+			buildPhases = (
+				75CE117E4F2026D124C63EC3 /* [CP] Check Pods Manifest.lock */,
+				B829F13A2796377900BA28F6 /* Sources */,
+				B829F13B2796377900BA28F6 /* Frameworks */,
+				B829F13C2796377900BA28F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B829F1402796377900BA28F6 /* PBXTargetDependency */,
+			);
+			name = SmashBrosUltimateTests;
+			productName = SmashBrosUltimateTests;
+			productReference = B829F13E2796377900BA28F6 /* SmashBrosUltimateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B829F1472796377900BA28F6 /* SmashBrosUltimateUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B829F1582796377900BA28F6 /* Build configuration list for PBXNativeTarget "SmashBrosUltimateUITests" */;
+			buildPhases = (
+				810E00653B4387D4A40A687D /* [CP] Check Pods Manifest.lock */,
+				B829F1442796377900BA28F6 /* Sources */,
+				B829F1452796377900BA28F6 /* Frameworks */,
+				B829F1462796377900BA28F6 /* Resources */,
+				740691E27524C3B586D6C452 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B829F14A2796377900BA28F6 /* PBXTargetDependency */,
+			);
+			name = SmashBrosUltimateUITests;
+			productName = SmashBrosUltimateUITests;
+			productReference = B829F1482796377900BA28F6 /* SmashBrosUltimateUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B829F1262796377600BA28F6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					B829F12D2796377600BA28F6 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					B829F13D2796377900BA28F6 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = B829F12D2796377600BA28F6;
+					};
+					B829F1472796377900BA28F6 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = B829F12D2796377600BA28F6;
+					};
+				};
+			};
+			buildConfigurationList = B829F1292796377600BA28F6 /* Build configuration list for PBXProject "SmashBrosUltimate" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B829F1252796377600BA28F6;
+			productRefGroup = B829F12F2796377600BA28F6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B829F12D2796377600BA28F6 /* SmashBrosUltimate */,
+				B829F13D2796377900BA28F6 /* SmashBrosUltimateTests */,
+				B829F1472796377900BA28F6 /* SmashBrosUltimateUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B829F12C2796377600BA28F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B829F1392796377900BA28F6 /* Preview Assets.xcassets in Resources */,
+				B829F1362796377900BA28F6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B829F13C2796377900BA28F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B829F1462796377900BA28F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		740691E27524C3B586D6C452 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmashBrosUltimate-SmashBrosUltimateUITests/Pods-SmashBrosUltimate-SmashBrosUltimateUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmashBrosUltimate-SmashBrosUltimateUITests/Pods-SmashBrosUltimate-SmashBrosUltimateUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmashBrosUltimate-SmashBrosUltimateUITests/Pods-SmashBrosUltimate-SmashBrosUltimateUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75CE117E4F2026D124C63EC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmashBrosUltimateTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79C867ED88468434E228B560 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmashBrosUltimate/Pods-SmashBrosUltimate-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmashBrosUltimate/Pods-SmashBrosUltimate-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmashBrosUltimate/Pods-SmashBrosUltimate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		810E00653B4387D4A40A687D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmashBrosUltimate-SmashBrosUltimateUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		923BF2E45D79CE4035F6795F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmashBrosUltimate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B829F12A2796377600BA28F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8DBB3DA279A453E006E721C /* FighterScrollView.swift in Sources */,
+				B8BA75A727976BEC000DC2CD /* SBUFighterModel.swift in Sources */,
+				B8DBB3CE279A3945006E721C /* Colors.swift in Sources */,
+				B829F1342796377600BA28F6 /* AllGamesView.swift in Sources */,
+				B8BA75AA2797710C000DC2CD /* SBURepository.swift in Sources */,
+				B81C05A62799FC3D0029B9F5 /* OnboardingView.swift in Sources */,
+				B8DBB3D3279A44CF006E721C /* OnboardingWalkthrough.swift in Sources */,
+				B829F16027963B2000BA28F6 /* SBUUniverseModel.swift in Sources */,
+				B8DBB3CB279A349F006E721C /* PageView.swift in Sources */,
+				B8272D42279B67C0005DE740 /* UniverseFilterSelector.swift in Sources */,
+				B8671A1C279B4D0A003B203E /* OnboardingViewModel.swift in Sources */,
+				B829F15D279638C500BA28F6 /* SBUBaseProvider.swift in Sources */,
+				B8272D3F279B5610005DE740 /* FighterDetailsView.swift in Sources */,
+				B8DBB3D7279A450D006E721C /* FighterCard.swift in Sources */,
+				B8DBB3D0279A3C8B006E721C /* View.swift in Sources */,
+				B81C05A12798CF450029B9F5 /* AllGamesViewModel.swift in Sources */,
+				B8671A1A279B305A003B203E /* SharedPreferencesManager.swift in Sources */,
+				B829F1322796377600BA28F6 /* SmashBrosUltimateApp.swift in Sources */,
+				B829F163279640AD00BA28F6 /* SBUApiProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B829F13A2796377900BA28F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B829F1432796377900BA28F6 /* SmashBrosUltimateTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B829F1442796377900BA28F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B829F14F2796377900BA28F6 /* SmashBrosUltimateUITestsLaunchTests.swift in Sources */,
+				B829F14D2796377900BA28F6 /* SmashBrosUltimateUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B829F1402796377900BA28F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B829F12D2796377600BA28F6 /* SmashBrosUltimate */;
+			targetProxy = B829F13F2796377900BA28F6 /* PBXContainerItemProxy */;
+		};
+		B829F14A2796377900BA28F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B829F12D2796377600BA28F6 /* SmashBrosUltimate */;
+			targetProxy = B829F1492796377900BA28F6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B829F1502796377900BA28F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B829F1512796377900BA28F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B829F1532796377900BA28F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A42246C2741704A0C08F6D8 /* Pods-SmashBrosUltimate.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SmashBrosUltimate/Preview Content\"";
+				DEVELOPMENT_TEAM = HRTQQ7Q4Q8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paulokeller.SmashBrosUltimate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B829F1542796377900BA28F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0ECE113331591246E84FF63A /* Pods-SmashBrosUltimate.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SmashBrosUltimate/Preview Content\"";
+				DEVELOPMENT_TEAM = HRTQQ7Q4Q8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paulokeller.SmashBrosUltimate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B829F1562796377900BA28F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7355F1C7D9362B9990463538 /* Pods-SmashBrosUltimateTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HRTQQ7Q4Q8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paulokeller.SmashBrosUltimateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmashBrosUltimate.app/SmashBrosUltimate";
+			};
+			name = Debug;
+		};
+		B829F1572796377900BA28F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09373795365473B6D08CC3EF /* Pods-SmashBrosUltimateTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HRTQQ7Q4Q8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paulokeller.SmashBrosUltimateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmashBrosUltimate.app/SmashBrosUltimate";
+			};
+			name = Release;
+		};
+		B829F1592796377900BA28F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A93385CA733881087C1E4CBF /* Pods-SmashBrosUltimate-SmashBrosUltimateUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HRTQQ7Q4Q8;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paulokeller.SmashBrosUltimateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SmashBrosUltimate;
+			};
+			name = Debug;
+		};
+		B829F15A2796377900BA28F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8FA85C4BB337DCB2E39A6B7 /* Pods-SmashBrosUltimate-SmashBrosUltimateUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HRTQQ7Q4Q8;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paulokeller.SmashBrosUltimateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SmashBrosUltimate;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B829F1292796377600BA28F6 /* Build configuration list for PBXProject "SmashBrosUltimate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B829F1502796377900BA28F6 /* Debug */,
+				B829F1512796377900BA28F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B829F1522796377900BA28F6 /* Build configuration list for PBXNativeTarget "SmashBrosUltimate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B829F1532796377900BA28F6 /* Debug */,
+				B829F1542796377900BA28F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B829F1552796377900BA28F6 /* Build configuration list for PBXNativeTarget "SmashBrosUltimateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B829F1562796377900BA28F6 /* Debug */,
+				B829F1572796377900BA28F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B829F1582796377900BA28F6 /* Build configuration list for PBXNativeTarget "SmashBrosUltimateUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B829F1592796377900BA28F6 /* Debug */,
+				B829F15A2796377900BA28F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B829F1262796377600BA28F6 /* Project object */;
+}
