@@ -1,0 +1,1 @@
+export 'hero_details_page.dart';
